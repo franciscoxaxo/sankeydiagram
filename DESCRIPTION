@@ -1,0 +1,11 @@
+Package: sankeydiagram
+Type: Package
+Title: Sankey Diagram Package
+Version: 1.0.0
+Author: Francisco Catalan Meyer
+Maintainer: Francisco Catalan Meyer <francisco.catalan@ug.uchile.cl>
+Description: Package for plot a sankey diagram from a matrix.
+License: GPL-3
+Encoding: UTF-8
+Imports: plotly
+RoxygenNote: 7.1.1
