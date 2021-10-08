@@ -13,10 +13,11 @@
 #'
 #' @examples
 matrizRelacional<- function(data_df, criterio1, criterio2){
-  subset1 <-  dplyr::filter(data_df, Question == criterio1)
-  subset2 <-  dplyr::filter(data_df, Question == criterio2)
-  labelsCol <- as.vector(unique(subset2[[7]]))
-  labelsRow <- as.vector(unique(subset1[[7]]))
+  data_df    <- data_df[-1]
+  subset1    <- dplyr::filter(data_df, Question == criterio1)
+  subset2    <- dplyr::filter(data_df, Question == criterio2)
+  labelsCol  <- as.vector(unique(subset2[[7]]))
+  labelsRow  <- as.vector(unique(subset1[[7]]))
   rowSubset1 <- nrow(subset1)
   rowSubset2 <- nrow(subset2)
 
@@ -36,7 +37,6 @@ matrizRelacional<- function(data_df, criterio1, criterio2){
         valueSubset2 <- subset2[j, 7]
         index_col_matrix <- which(colnames(baseMatrix) == valueSubset2)
         baseMatrix[index_row_matrix, index_col_matrix] = baseMatrix[index_row_matrix, index_col_matrix] + 1
-        #print(paste("i. ",i , "j: ", j ))
       }
     }
   }

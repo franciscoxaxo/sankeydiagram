@@ -199,7 +199,7 @@ Para comenzar se necesita que los títulos de las 7 primeras columnas sean:
 
 Para cargar la tabla utilizaremos la función `read.csv()`:
 
-        df <- read.csv(rutaDelArchivo, sep = ";", encoding = "UTF-8")
+        df <- read.csv(rutaDelArchivo, sep = ";", encoding = "UTF-8", na.string = "")
 
 Utilizaremos la función `CxF` para ordenar esta tabla:
   
